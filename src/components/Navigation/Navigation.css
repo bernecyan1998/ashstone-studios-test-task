@@ -1,0 +1,125 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  transition: transform var(--transition-normal);
+}
+
+.navigation--hidden {
+  transform: translateY(-100%);
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navigation__item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: var(--color-text-primary);
+  padding: 8px 0;
+  transition: opacity var(--transition-fast);
+}
+
+.navigation__link:hover {
+  opacity: 0.6;
+}
+
+.navigation__chevron {
+  width: 8px;
+  height: auto;
+  transition: transform var(--transition-fast);
+}
+
+.navigation__item:hover .navigation__chevron {
+  transform: rotate(180deg);
+}
+
+.navigation__submenu {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
+  transform: translateY(8px);
+  width: 176px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), transform var(--transition-fast),
+    visibility var(--transition-fast);
+  z-index: 200;
+}
+
+.navigation__item:hover .navigation__submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navigation__submenu-item {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.navigation__submenu-item:last-child {
+  border-bottom: none;
+}
+
+.navigation__submenu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-2xs);
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.navigation__submenu-link:hover {
+  color: var(--color-text-secondary);
+}
+
+.navigation__submenu-text {
+  transition: transform var(--transition-fast);
+}
+
+.navigation__submenu-link:hover .navigation__submenu-text {
+  transform: translateX(8px);
+}
+
+.navigation__submenu-chevron {
+  opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+}

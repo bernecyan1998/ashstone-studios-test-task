@@ -1,0 +1,123 @@
+.header {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 20px 20px;
+  min-height: var(--header-height);
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header__logo-image {
+  height: 27px;
+  width: auto;
+  display: block;
+}
+
+.header__search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: var(--color-text-primary);
+  transition: opacity var(--transition-fast);
+}
+
+.header__search-icon:hover {
+  opacity: 0.6;
+}
+
+.header__hamburger {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.header__hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border-radius: 1px;
+}
+
+.header__search-bar {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal), padding var(--transition-normal);
+  border-top: 1px solid transparent;
+}
+
+.header__search-bar--open {
+  max-height: 64px;
+  border-top-color: var(--color-border);
+}
+
+.header__search-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+}
+
+.header__search-bar-icon {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.header__search-input {
+  flex: 1;
+  background: transparent;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  padding: 4px 0;
+}
+
+.header__search-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.header__search-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  padding: 4px;
+  transition: color var(--transition-fast);
+}
+
+.header__search-close:hover {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 1024px) {
+  .header__hamburger {
+    display: flex;
+  }
+}
