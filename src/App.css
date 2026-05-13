@@ -1,0 +1,26 @@
+.app {
+  min-height: 100vh;
+}
+
+.app__content {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.app__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-base);
+}
+
+.app__error {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--color-accent);
+  font-size: var(--fs-base);
+}
