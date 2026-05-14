@@ -1,16 +1,35 @@
-# React + Vite
+# Ashstone Studios — Front-End Test Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Blog landing built from a Figma mockup as a React test task.
 
-Currently, two official plugins are available:
+**Live demo:** https://bernecyan1998.github.io/ashstone-studios-test-task/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Sticky horizontal menu that hides after 200px of downward scroll and reappears on upward scroll
+- Hover submenus (CSS-only) with an invisible bridge so the dropdown stays open while the cursor crosses the gap
+- Mobile drawer menu with expandable submenus
+- Responsive 3 / 2 / 1 column post grid
+- Retina image support via `srcset`
+- Posts fetched from a remote JSON endpoint
+- Client-side search filtering posts by title and description
+- Post detail popup, closable via the close button or backdrop click
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+React 19, Vite 8, plain CSS (BEM naming, rem-based spacing per spec).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Output goes to `dist/`. Deploys to GitHub Pages automatically on push to `main` via the workflow in `.github/workflows/deploy.yml`.
