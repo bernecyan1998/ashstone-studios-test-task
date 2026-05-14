@@ -28,6 +28,15 @@
   align-items: center;
 }
 
+.navigation__item--has-submenu::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+}
+
 .navigation__link {
   display: flex;
   align-items: center;
