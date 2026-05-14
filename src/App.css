@@ -3,8 +3,8 @@
 }
 
 .app__content {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .app__loading {
@@ -19,7 +19,7 @@
 .app__error {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 48px 20px;
+  padding: 3rem 1.25rem;
   text-align: center;
   color: var(--color-accent);
   font-size: var(--fs-base);

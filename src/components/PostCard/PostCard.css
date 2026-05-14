@@ -10,7 +10,7 @@
 }
 
 .post-card__content {
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 
 .post-card__tag {
@@ -19,7 +19,7 @@
   font-weight: 700;
   color: var(--color-accent);
   text-transform: capitalize;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .post-card__title {
@@ -29,17 +29,17 @@
   line-height: 30px;
   letter-spacing: 0;
   color: var(--color-text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .post-card__meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 0.25rem;
   font-size: var(--fs-xs);
   color: var(--color-text-secondary);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .post-card__author {
